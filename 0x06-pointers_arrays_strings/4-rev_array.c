@@ -1,23 +1,20 @@
 #include "main.h"
-
 /**
- * reverse_array -  function that reverses the content of an array of integers.
- * @a: puntero del array.
- * @n: numero de elementos del array.
+ * reverse_array - reverse array of integers
+ * @a: array
+ * @n: number of elements of array
+ *
+ * Return: void
  */
-
 void reverse_array(int *a, int n)
 {
 	int i;
-	int b;
+	int t;
 
-	i = 0;
-	while (i < n)
+	for (i = 0; i < n--; i++)
 	{
-		n--;
-		b = a[i];
+		t = a[i];
 		a[i] = a[n];
-		a[n] = b;
-		i++;
+		a[n] = t;
 	}
 }
